@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="528dp"
+        android:text="Selamat datang kembali!"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <EditText
+        android:id="@+id/email_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text"
+        app:layout_constraintWidth_percent="0.8" />
+
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:hint="Password"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <TextView
+        android:id="@+id/forgotpassword_text"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Forgot Password?"
+        android:textColor="#A4D4CC"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="401dp" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="240dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="Masuk"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <ImageButton
+        android:id="@+id/button_google"
+        android:layout_width="94dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_background"
+        android:contentDesription="@string/google_button"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/google"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="557dp" />
+
+    <ImageButton
+        android:id="@+id/button_apple"
+        android:layout_width="94dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_background"
+        android:contentDesription="@string/apple_button"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/apple"
+        tools:layout_editor_absoluteX="276dp"
+        tools:layout_editor_absoluteY="557dp" />
+
+    <ImageButton
+        android:id="@+id/button_facebook"
+        android:layout_width="94dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_background"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/button_facebook"
+        android:src="@drawable/facebook"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="557dp" />
+
+    <TextView
+        android:id="@+id/optionmasuk_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="196dp"
+        android:text="Atau masuk dengan"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/belumpunyaakun_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Belum punya akun?"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/daftarsekarang_text"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Daftar Sekarang"
+        android:textColor="#A4D4CC"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="633dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
