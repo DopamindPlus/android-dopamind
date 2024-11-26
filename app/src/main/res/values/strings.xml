@@ -10,13 +10,14 @@
     <string name="help_subtitle">Just hold the button to call.</string>
     <string name="not_sure_text">Not sure what to do?</string>
     <string name="sesak_nafas">Sesak Nafas, Harus Apa?</string>
-    <string name="serangan_panik">Serangan Panik?</string>
+    <string name="serangan_panik">Serangan Panik, Bagaimana?</string>
+    <string name="bunuh_diri">Indikasi Bunuh Diri, Bagaimana?</string>
     <string name="more">More</string>
     <string name="emergency_center">Emergency Help\nNeeded?</string>
     <string name="hello_user">Hello, Wisnu</string>
     <string name="complete_profile">Complete your Profile</string>
     <string name="define_location">Define Location</string>
-    <string name="location">Althon Apartment</string>
+    <string name="location">Alton Apartment</string>
     <string name="profile">Profile</string>
     <string name="from_label">From</string>
     <string name="from_location">RSND Universitas Diponegoro</string>
@@ -34,6 +35,9 @@
     <string name="condition_label">Condition</string>
     <string name="condition_value">Normal</string>
     <string name="phone_label">Phone</string>
-    <string name="phone_value">081234567890</string>
-    <string name="slide_to_cancel">Cancel</string>
+    <string name="slide_to_cancel">Slide To Cancel</string>
+    <string name="time_estimate">15 min</string>
+    <string name="confirming">Confirming in 10...</string>
+    <string name="weight_label">Weight</string>
+    <string name="weight_value">60 KG</string>
 </resources>

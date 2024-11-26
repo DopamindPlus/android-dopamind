@@ -9,10 +9,12 @@
     <LinearLayout
         android:id="@+id/navbar"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="68dp"
         android:orientation="horizontal"
+        android:background="@color/white"
+        android:elevation="10dp"
         android:gravity="center_vertical"
-        android:paddingHorizontal="16dp"
+        android:paddingHorizontal="14dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -39,7 +41,8 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:contentDescription="@string/profile"
-            android:src="@drawable/profile_placeholder"
+            android:src="@drawable/profile_pict"
+            android:scaleType="centerCrop"
             android:layout_marginStart="16dp"
             android:background="#FFFFFF"/>
     </LinearLayout>
@@ -50,17 +53,18 @@
         android:layout_height="wrap_content"
         android:text="@string/just_hold_the_button_to_call"
         android:textSize="14sp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/emergency_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/sos_button_container"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        app:cardCornerRadius="200dp"
-        app:cardElevation="0dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:cardCornerRadius="150dp"
+        android:layout_marginTop="10dp"
+        app:cardElevation="10dp"
         app:cardBackgroundColor="@android:color/transparent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,10 +75,11 @@
             android:id="@+id/sos_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/red"
+            android:background="@drawable/button_gradient"
             android:text="@string/sos"
-            android:textColor="@color/white"
-            android:textSize="32sp"
+            android:textColor="@android:color/white"
+            android:textSize="45sp"
+            android:gravity="center"
             android:animation="@anim/pulse_animation" />
     </androidx.cardview.widget.CardView>
 
@@ -84,7 +89,7 @@
         android:layout_height="wrap_content"
         android:text="@string/not_sure_text"
         android:textSize="14sp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintTop_toBottomOf="@id/sos_button_container"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -92,7 +97,7 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="38dp"
         android:clipToPadding="false"
         android:paddingHorizontal="16dp"
         android:scrollbars="none"
@@ -104,48 +109,100 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="200dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="2dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:text="@string/sesak_nafas"
-                    android:textAlignment="center"/>
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sesak_nafas"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/arrow_right"
+                        android:contentDescription="@string/sesak_nafas"
+                        app:tint="#A0A0A0" />
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <androidx.cardview.widget.CardView
-                android:layout_width="200dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="2dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:text="@string/serangan_panik"
-                    android:textAlignment="center"/>
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/serangan_panik"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/arrow_right"
+                        android:contentDescription="@string/serangan_panik"
+                        app:tint="#A0A0A0" />
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <androidx.cardview.widget.CardView
-                android:layout_width="200dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="2dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:text="@string/more"
-                    android:textAlignment="center"/>
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bunuh_diri"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/arrow_right"
+                        android:contentDescription="@string/bunuh_diri"
+                        app:tint="#A0A0A0"/>
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
+
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -153,7 +210,7 @@
         android:id="@+id/emergency_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="200dp"
         android:text="@string/emergency_center"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -199,7 +256,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/complete_profile"
-                    android:textColor="#FF0000"
+                    android:textColor="@color/red"
                     android:textSize="12sp" />
             </LinearLayout>
 
@@ -213,19 +270,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/define_location"
+                    android:textColor="@color/black"
                     android:textSize="12sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/location"
-                    android:textColor="#666666"
+                    android:textColor="@color/red"
                     android:textSize="12sp" />
             </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

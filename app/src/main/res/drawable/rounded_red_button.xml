@@ -1,4 +1,4 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/red" />
-    <corners android:radius="24dp" />
+    <solid android:color="@color/red" /> <!-- Ganti dengan warna merah yang diinginkan -->
+    <corners android:radius="150dp" /> <!-- Buat sudut bulat, sesuai dengan ukuran Button -->
 </shape>
